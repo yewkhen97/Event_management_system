@@ -1,193 +1,125 @@
-PE html>
-<html>
+<?php
+session_start();
+if($_SESSION["id"] == ""){
+echo '<script type="text/javascript">'; 
+echo 'alert("Please Login First");'; 
+echo 'window.location.href = "index.php";';
+echo '</script>';
+}
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<?php
+   include 'customerHeader.php';
+?>
+
+        <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
+    font-family: Arial;
+    line-height: 30px;
+    color: #333;
 }
 
-* {
-  box-sizing: border-box;
+#payment-box {
+    padding: 150px;
+   margin-left:500px;
+    border: #E4E4E4 1px solid;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
 }
 
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
+#pay_now {
+    padding: 10px 30px;
+    background: #09f;
+    border: #038fec 1px solid;
+    border-radius: 3px;
+    color: #FFF;
+    width: 100%;
+    cursor: pointer;
 }
 
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
+.txt-title {
+    margin: 25px 0px 0px 0px;
+    color: #4e4e4e;
 }
 
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type=text] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.btn:hover {
-  background-color: #45a049;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
-span.price {
-  float: right;
-  color: grey;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
+.txt-price {
     margin-bottom: 20px;
-  }
+    color: #08926c;
+    font-size: 1.1em;
 }
 </style>
 </head>
 <body>
-
-<h2>Checkout</h2>
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form action="/action_page.php">
-      
-        <div class="row">
-          <div class="col-50">
-            <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="New York">
-
-            <div class="row">
-              <div class="col-50">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY">
-              </div>
-              <div class="col-50">
-                <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="10001">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-50">
-            <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style="color:navy;"></i>
-              <i class="fa fa-cc-amex" style="color:blue;"></i>
-              <i class="fa fa-cc-mastercard" style="color:red;"></i>
-              <i class="fa fa-cc-discover" style="color:orange;"></i>
-            </div>
-            <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
-            <div class="row">
-              <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
-              </div>
-              <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-        </label>
-        <input type="submit" value="Continue to checkout" class="btn">
-      </form>
+  <php>
+    <?php
+include "../../BusinessServiceLayer/UserC/BookingController.php"; // Display Events in cart via the controller -Darrell
+$title = "Total amount that need to pay!";
+$events = "Event Package(s)";
+$totalpayment = 0;
+?>
+<div id="payment-box">
+<?php
+		// Start for Cart list for Events -Darrell
+        echo "<h4>$events</h4>";
+        echo "<table width=100%>
+        <tr>
+        	<th>Event/Equipment</th>
+        	<th>Price</th>
+          <th>Delete </th>
+        </tr>";
+        $hiddenTotal = cartList(); // total price for events -Darrell
+        echo "</table>";
+        echo "<br><br>";
+        // End for Cart list for Events -Darrell
+        $totalpayment += $hiddenTotal; // Test for adding total event price -Darrell
+        $_SESSION['totalpayment'] = $totalpayment;
+        echo"<h4>$title</h4>";
+        echo"<div>MYR $totalpayment</div>";
+        storingBookID();
+        ?>
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr"
+            method="post" target="_top">
+            <input type='hidden' name='business'
+                value='sb-exbyo2416675@business.example.com'> <input type='hidden'
+                name='item_name' value='EVENT'> <input type='hidden'
+                name='item_number' value='EVENT#N1'> 
+                <?php
+                echo"<input type='hidden'
+                name='amount' value='$totalpayment'>" ?>
+                <input type='hidden'
+                name='no_shipping' value='1'> <input type='hidden'
+                name='currency_code' value='MYR'> <input type='hidden'
+                name='notify_url'
+                value='http://localhost/EMS/BusinessServiceLayer/UserM/cPaymentRecord.php'>
+            <input type='hidden' name='cancel_return'
+                value='http://localhost/EMS/ApplicationLayer/UserView/cPaymentCancel.php'>
+            <input type='hidden' name='return'
+                value='http://localhost/EMS/ApplicationLayer/UserView/cPaymentSuccess.php'>
+            <input type="hidden" name="cmd" value="_xclick"> <input
+                type="submit" name="pay_now" id="pay_now"
+                Value="Pay Now">
+        </form>
     </div>
-  </div>
-  <div class="col-25">
-    <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-      <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-    </div>
-  </div>
-</div>
-
 </body>
+</html>
+
+        </div>
+        <!-- /.container-fluid -->
+
+   
+
+   
+<?php
+         include 'customerFooter.php';
+         ?>
 </html>
