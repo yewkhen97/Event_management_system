@@ -71,22 +71,31 @@ textarea {
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:150px;margin-right:200px">
 
-<form class="modal-content" action="../../BusinessServiceLayer/UserC/sEventPackageController.php?id=<?php echo"$_SESSION[id]";?>&event=supplieradd" method="POST">
+<form class="modal-content" action="../../BusinessServiceLayer/UserC/sEventPackageController.php?id=<?php echo"$_SESSION[id]";?>&event=supplierupd" method="POST">
     <div class="container">
       <h1><b>Edit Event Package</b></h1>
       <br><label for="title"><b>Title</b></label>
-      <input type="text" placeholder="Enter the title" name="title" required>
-
-      <label for="details"><b>Details</b></label><br>
-      <textarea placeholder="The details.." name="details" required></textarea>
-
-      Upload Image: <input type="file" name="pic" id="pic"><br>
-
+      <input type="text" placeholder="Enter the title" name="title" value='<?php echo $_POST['pName']; ?>' required>
+      <label for="details"><b>Decription</b></label><br>
+      <textarea placeholder="The details.." name="details" required><?php echo $_POST['pDes']; ?></textarea>
+      <br>
+      <br><label for="price"><b>Package Price</b></label><br>
+      <input type="number" placeholder="Enter price" name="price" value='<?php echo $_POST['pPrice']; ?>' required>
+      <input style="display: none;" name="pID" value='<?php echo $_POST["pID"];?>'>
       <div class="clearfix">
-        <button type="submit" class="button1" >Send</button>
+        <br>
+        <button type="submit" class="button1" name="send">Send</button>
       </div>
+    </form>
+      <div class="clearfix">
+        <form action="javascript:void(0);" method="POST" name="myForm" id="myForm">
+        <input style="display: none;" name="pID" value='<?php echo $_POST["pID"];?>'>
+        <button onclick="confirmDelete()" style="width: 100%;background-color: red;color: white;padding-top: 12px;padding-bottom: 12px;border: none;" name="delete">Delete</button>
+        </form>
+      </div>
+      <br>
     </div>
-  </form>
+
 </div>
 <br>
 <?php
@@ -95,6 +104,15 @@ textarea {
 <script>
   function sendMessage() {
     alert("Your message has been updated ");
+  }
+
+  function confirmDelete(){
+    var r = confirm("Are you sure you want to delete the event package?");
+    if(r==true){
+      document.getElementById("myForm").action = "../../BusinessServiceLayer/UserC/sEventPackageController.php?id=<?php echo"$_SESSION[id]";?>&event=supplierdlt";
+      document.getElementById("myForm").submit();
+    }
+    else{}
   }
 </script>
 
