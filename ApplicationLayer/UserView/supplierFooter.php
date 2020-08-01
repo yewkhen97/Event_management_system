@@ -1,7 +1,7 @@
   <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © SDW GROUP 4 EVENT MANAGEMENT SYSTEM 2018/2019</span>
+              <span>Copyright © PARTY EVENT MANAGEMENT SYSTEM 2020/2021</span>
             </div>
           </div>
         </footer>
@@ -49,8 +49,42 @@
         </div>
       </div>
     </div>
-
-
+<!-- view equipment Modal-->
+    <div class="modal fade" id="AddEquipmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Equipment?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Go" below if you are want to view event package or "Cancel" if you not ready.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="sAddEquipment.php?id=<?php echo"$_SESSION[id]";?>">Go!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- view edit equipment Modal-->
+    <div class="modal fade" id="UpdateEquipmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Equipment?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Go" below if you are want to view event package or "Cancel" if you not ready.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="sUpdateEquipment.php?id=<?php echo"$_SESSION[id]";?>">Go!</a>
+          </div>
+        </div>
+      </div>
+    </div>
 <!-- view equipment Modal-->
     <div class="modal fade" id="equipmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -64,7 +98,7 @@
           <div class="modal-body">Select "Go" below if you are want to view  equipment or "Cancel" if you not ready.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="sEquipmentOrder.php?id=<?php echo"$_SESSION[id]";?>">Go!</a>
+            <a class="btn btn-primary" href="../../BusinessServiceLayer/UserC/sViewOrderController.php?id=<?php echo"$_SESSION[id]";?>&controllerFunction=list">Go!</a>
           </div>
         </div>
       </div>
@@ -75,7 +109,29 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">View Your status?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Manage Order status?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Go" below if you want to view your or "Cancel" if you not ready.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            
+            <?php
+              echo"<a class='btn btn-primary' href='sManageTracking.php?id=$_SESSION[id]'>Go!</a>";
+
+              ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- view Profile Modal-->
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Manage Profile Information?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>

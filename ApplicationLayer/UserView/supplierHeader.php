@@ -90,21 +90,19 @@ $id1=$_GET['id'];
             <a class="dropdown-item active" href="#" data-toggle="modal" data-target="#logoutModal">Log out</a>
             <a class="dropdown-item" href="#" ></a>
             <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Equipment Pages:</h6>
+            <h6 class="dropdown-header">Eevnt & Equipment Pages:</h6>
                <!--Equipment Page -->
             <a class="dropdown-item" href="sViewEventPackage.php?id=<?php echo"$_SESSION[id]";?>" >Event Package</a>
-            <a class="dropdown-item" href="sEquipmentOrder.php?id=<?php echo"$_SESSION[id]";?>" >Equipment Order</a>
+
+            <a class="dropdown-item" href="../../BusinessServiceLayer/UserC/sViewOrderController.php?id=<?php echo"$_SESSION[id]";?>&controllerFunction=list" >Equipment Order</a>
             <a class="dropdown-item" href="sUpdateEquipment.php?id=<?php echo"$_SESSION[id]";?>" >Update Equipment</a>
-            
+            <a class="dropdown-item" href="sStatus.php?id=<?php echo"$_SESSION[id]";?>" >Supplier Information</a>
                <div class="dropdown-divider"></div>
                <!--Other Relates Page -->
               <h6 class="dropdown-header">Other Pages:</h6>
-             <a class="dropdown-item " href="sViewBookingData.php?id=<?php echo"$_SESSION[id]";?>" >Booking</a>
-              <?php
-              echo"<a class='dropdown-item' href='sStatus.php?id=$_SESSION[id]'>Status</a>";
-
-              ?>
-              <a class="dropdown-item" href="sViewMessage.php?id=<?php echo"$_SESSION[id]";?>">Message</a>
+             <a class="dropdown-item " href="sManageTracking.php?id=<?php echo"$_SESSION[id]";?>" >Order Status</a>
+          
+              <a class="dropdown-item" href="sAnalyticReport.php?id=<?php echo"$_SESSION[id]";?>">Report</a>
           </div>
         </li>
           <!-- Sidebar for Customer-->
@@ -130,38 +128,38 @@ $id1=$_GET['id'];
                <!--Other Relates Page for customer -->
                <div class="dropdown-divider"></div>
               <h6 class="dropdown-header">Other pages:</h6>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Rating</a>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Question & Answer</a>
+            
+              <a class="dropdown-item" href="#" onclick="alertLogin()">Tracking Order</a>
           </div>
         </li>
 
-           <!-- Sidebar for Event Organizer-->
-        <li class="nav-item dropdown">
+         <!-- Sidebar for Event Organizer -->
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-calendar-alt"></i>
-            <span>Event Organizer</span>
-          </a>
+            <span>Event Organizer</span> -->
+         <!-- </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Login Screens:</h6>
             <a class="dropdown-item active" href="#" onclick="alertLogin()">Login</a>
             <a class="dropdown-item" href="#" onclick="alertLogin()">Register</a>
             <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Event and Equipment:</h6>
+            <h6 class="dropdown-header">Event and Equipment:</h6> -->
                <!--Equipment Page -->
-            <a class="dropdown-item" href="#" onclick="alertLogin()">Event Package</a>
-            <a class="dropdown-item" href="#" onclick="alertLogin()">Equipment Rental</a>
+          <!--  <a class="dropdown-item" href="#" onclick="alertLogin()">Event Package</a>
+            <a class="dropdown-item" href="#" onclick="alertLogin()">Equipment Rental</a> -->
                <!--Payment Page -->
-               <div class="dropdown-divider"></div>
+            <!--   <div class="dropdown-divider"></div>
               <h6 class="dropdown-header">Payment pages:</h6>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Pay</a>
+              <a class="dropdown-item" href="#" onclick="alertLogin()">Pay</a> -->
 
                <!--Other Relates Page for event organizer -->
-               <div class="dropdown-divider"></div>
+           <!--    <div class="dropdown-divider"></div>
               <h6 class="dropdown-header">Other pages:</h6>
               <a class="dropdown-item" href="#" onclick="alertLogin()">Rating</a>
               <a class="dropdown-item" href="#" onclick="alertLogin()">Question & Answer</a>
           </div>
-        </li>
+        </li> -->
 
 
            <!-- Sidebar for administator-->

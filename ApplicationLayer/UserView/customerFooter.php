@@ -3,7 +3,7 @@
            <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © SDW GROUP 4 EVENT MANAGEMENT SYSTEM 2018/2019</span>
+              <span>Copyright © PARTY EVENT MANAGEMENT SYSTEM 2020/2021 </span>
             </div>
           </div>
         </footer>
