@@ -1,48 +1,64 @@
 <?php
-//include class model user
-require_once '../../BusinessServiceLayer/UserM/cPaymentRecord.php';
 
-/**
- * 
- */
-class paymentController
+class DBController
 {
 
-	public function operator()
-	{
-		//check if data is submitted
-		//check data from form 
+    private $host = "localhost";
 
-		//create new object user
-		$value= new paymentRecord();
-		
-		//pass form data to model	
-		//set user attributes
-		$value->shows = $_POST['$shows'];
+    private $user = "root";
 
-		$value->save();
-			
+    private $password = "";
 
-	}
-	
-	public function getValue()
-	{
-		// assign the returned values(array of user object) to variable users
-		$shows = paymentRecord::getData(); // we use the static method All() that we
-							  // created in user model to retrieve all 
-							  // data for user
-		return $shows;
-	}
-	
-	public function destroy()
-	{
-		$delete = new paymentRecord();
-		$delete->deleteData();
+    private $database = "EMS";
 
-	}
+    private $conn;
 
-	
+    function __construct()
+    {
+        $this->conn = $this->connectDB();
+    }
 
-	
+    function connectDB()
+    {
+        $conn = mysqli_connect($this->host, $this->user, $this->password, $this->database);
+        return $conn;
+    }
+
+    function runQuery($query, $param_type, $param_value_array)
+    {
+        $sql = $this->conn->prepare($query);
+        $this->bindQueryParams($sql, $param_type, $param_value_array);
+        $sql->execute();
+        $result = $sql->get_result();
+        
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $resultset[] = $row;
+            }
+        }
+        
+        if (! empty($resultset)) {
+            return $resultset;
+        }
+    }
+
+    function bindQueryParams($sql, $param_type, $param_value_array)
+    {
+        $param_value_reference[] = & $param_type;
+        for ($i = 0; $i < count($param_value_array); $i ++) {
+            $param_value_reference[] = & $param_value_array[$i];
+        }
+        call_user_func_array(array(
+            $sql,
+            'bind_param'
+        ), $param_value_reference);
+    }
+
+    function insert($query, $param_type, $param_value_array)
+    {
+        $sql = $this->conn->prepare($query);
+        $this->bindQueryParams($sql, $param_type, $param_value_array);
+        $sql->execute();
+    }
 }
 ?>
