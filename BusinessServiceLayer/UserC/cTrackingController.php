@@ -31,7 +31,7 @@ session_start();
                                                          $result3 = getStatus($row["B_bookingID"]);
                                                          if ($result3-> num_rows > 0){
 															while ($row3 = $result3-> fetch_assoc()){
-															$str_arr = explode (",",$row3["TO_process"] );
+															$str_arr = explode (",",$row3["TO_proc"] );
 															$str_arr2 = explode (",",$row3["TO_Date"] );
 														   echo"<td>";
 														   $i=1;
