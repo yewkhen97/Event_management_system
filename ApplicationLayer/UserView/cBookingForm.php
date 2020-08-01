@@ -39,33 +39,37 @@ include "customerHeader.php";
     <div class="form-group">
       <label class="control-label col-sm-2" for="DayStart">Day Start:</label>
       <div class="col-sm-10">
-        <input type="date" class="form-control" id="DayStart" name="DayStart">
+        <input type="date" class="form-control" id="DayStart" name="DayStart" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="DayEnd">Day End:</label>
       <div class="col-sm-10">          
-        <input type="date" class="form-control" id="DayEnd" name="DayEnd">
+        <input type="date" class="form-control" id="DayEnd" name="DayEnd" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="TimeStart">Time Start:</label>
       <div class="col-sm-10">          
-        <input type="Time" class="form-control" id="TimeStart" name="TimeStart">
+        <input type="Time" class="form-control" id="TimeStart" name="TimeStart" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="TimeEnd">Time End:</label>
       <div class="col-sm-10">          
-        <input type="Time" class="form-control" id="TimeEnd" name="TimeEnd">
+        <input type="Time" class="form-control" id="TimeEnd" name="TimeEnd" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-1" for="Venue">Venue:</label>         
-          <select name="ListVenue" form="ListVenue">
+          <select name="ListVenue" required>
             <option value="Hotel Sri Malaysia">Hotel Sri Malaysia</option>
             <option value="Putra Hotel">Putra Hotel</option>
           </select>
+          <input style="display: none;" name="pID" value="<?php echo $_POST['pID']; ?>">
+          <input style="display: none;" name="pName" value="<?php echo $_POST['pName']; ?>">
+          <input style="display: none;" name="pDes" value="<?php echo $_POST['pDes']; ?>">
+          <input style="display: none;" name="pPrice" value="<?php echo $_POST['pPrice']; ?>">
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">

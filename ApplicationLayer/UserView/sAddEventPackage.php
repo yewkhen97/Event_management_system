@@ -92,14 +92,16 @@ textarea {
       <br><label for="title"><b>Title</b></label>
       <input type="text" placeholder="Enter the title" name="title" required>
 
-      <label for="details"><b>Details</b></label><br>
+      <label for="details"><b>Description</b></label><br>
       <textarea placeholder="The details.." name="details" required></textarea>
-
-      Upload Image: <input type="file" name="pic" id="pic"><br>
-
+      <br>
+      <br><label for="price"><b>Package Price</b></label><br>
+      <input type="number" placeholder="Enter price" name="price" required>
       <div class="clearfix">
+      <br>
         <button type="submit" class="button1">Send</button>
       </div>
+      <br>
     </div>
   </form>
 </div>
