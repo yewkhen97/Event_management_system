@@ -276,8 +276,9 @@ span.psw {
                <div class="dropdown-divider"></div>
                <!--Other Relates Page -->
               <h6 class="dropdown-header">Other Pages:</h6>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Status</a>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Rating</a>
+              <a class="dropdown-item" href="#" onclick="alertLogin()">Order Status</a>
+              <a class="dropdown-item" href="#" onclick="alertLogin()">Report</a>
+             
           </div>
         </li>
           <!-- Sidebar for Customer-->
@@ -303,13 +304,13 @@ span.psw {
                <!--Other Relates Page for customer -->
                <div class="dropdown-divider"></div>
               <h6 class="dropdown-header">Other pages:</h6>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Rating</a>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Question & Answer</a>
+              <a class="dropdown-item" href="#" onclick="alertLogin()">Tracking Order</a>
+
           </div>
         </li>
 
            <!-- Sidebar for Event Organizer-->
-        <li class="nav-item dropdown">
+       <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-calendar-alt"></i>
             <span>Event Organizer</span>
@@ -319,22 +320,22 @@ span.psw {
             <a class="dropdown-item active" href="#" onclick="document.getElementById('e02').style.display='block'">Login</a>
             <a class="dropdown-item" href="#" onclick="document.getElementById('e01').style.display='block'">Register</a>
             <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Event and Equipment:</h6>
+            <h6 class="dropdown-header">Event and Equipment:</h6> -->
                <!--Equipment Page -->
-            <a class="dropdown-item" href="#" onclick="alertLogin()">Event Package</a>
-            <a class="dropdown-item" href="#" onclick="alertLogin()">Equipment Rental</a>
+           <!-- <a class="dropdown-item" href="#" onclick="alertLogin()">Event Package</a>
+            <a class="dropdown-item" href="#" onclick="alertLogin()">Equipment Rental</a> -->
                <!--Payment Page -->
-               <div class="dropdown-divider"></div>
+             <!--  <div class="dropdown-divider"></div>
               <h6 class="dropdown-header">Payment pages:</h6>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Pay</a>
+              <a class="dropdown-item" href="#" onclick="alertLogin()">Pay</a> -->
 
                <!--Other Relates Page for event organizer -->
-               <div class="dropdown-divider"></div>
+               <!-- <div class="dropdown-divider"></div>
               <h6 class="dropdown-header">Other pages:</h6>
               <a class="dropdown-item" href="#" onclick="alertLogin()">Rating</a>
               <a class="dropdown-item" href="#" onclick="alertLogin()">Question & Answer</a>
           </div>
-        </li>
+        </li> -->
 
 
            <!-- Sidebar for administator-->
@@ -418,7 +419,7 @@ span.psw {
                   <div class="card-body-icon">
                     <i class="fas fa-calendar-alt"></i>
                   </div>
-                  <div class="mr-5">EVENT ORGANIZER</div>
+                  <!-- <div class="mr-5">EVENT ORGANIZER</div>
                 </div>
                 <a class="card-footer text-white clearfix small z-1" href="#" data-toggle="modal" data-target="#eventRegister">
                   <span class="float-left">Join us now!</span>
@@ -435,7 +436,7 @@ span.psw {
                 <div class="card-body">
                   <div class="card-body-icon">
                     <i class="fas fa-user-cog"></i>
-                  </div>
+                  </div> -->
                   <div class="mr-5">Administrator</div>
                 </div>
                 <a class="card-footer text-white clearfix small z-1" href="#" data-toggle="modal" data-target="#adminalert">
@@ -459,7 +460,7 @@ span.psw {
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © SDW GROUP 4 EVENT MANAGEMENT SYSTEM 2018/2019</span>
+              <span>Copyright © PARTY EVENT MANAGEMENT SYSTEM 2020/2021</span>
             </div>
           </div>
         </footer>
@@ -744,7 +745,7 @@ span.psw {
 
 
 
-<!-- Login  form for event organizer -->
+<!-- Login  form for event organizer
 <div id="e02" class="modal1">
 
  
@@ -772,7 +773,7 @@ span.psw {
       <span class="psw">Sign Up? <a href="#" onclick="registerevent()">click me</a></span>
     </div>
   </form>
-</div>
+</div> -->
 
 <!-- Login  form for admin-->
 <div id="a01" class="modal1">

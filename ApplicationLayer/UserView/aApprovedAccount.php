@@ -96,8 +96,8 @@
                <div class="dropdown-divider"></div>
                <!--Other Relates Page -->
               <h6 class="dropdown-header">Other Pages:</h6>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Status</a>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Rating</a>
+                 <a class="dropdown-item" href="#" onclick="alertLogin()">Order Status</a>
+              <a class="dropdown-item" href="#" onclick="alertLogin()">Report</a>
           </div>
         </li>
           <!-- Sidebar for Customer-->
@@ -123,8 +123,7 @@
                <!--Other Relates Page for customer -->
                <div class="dropdown-divider"></div>
               <h6 class="dropdown-header">Other pages:</h6>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Rating</a>
-              <a class="dropdown-item" href="#" onclick="alertLogin()">Question & Answer</a>
+             <a class="dropdown-item" href="#" onclick="alertLogin()">Tracking Order</a>
           </div>
         </li>
 
@@ -275,7 +274,7 @@ echo "<tr><td>".$row["S_supplierID"]. "</td><td> " . $row["S_SSMNO"]. "</td> <td
            <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © SDW GROUP 4 EVENT MANAGEMENT SYSTEM 2018/2019</span>
+              <span>Copyright © PARTY EVENT MANAGEMENT SYSTEM 2019/2020</span>
             </div>
           </div>
         </footer>
