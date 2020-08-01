@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 
-    <title>EMS Admin Approve Membe</title>
+    <title>EMS Admin Approve Member</title>
 
     <!-- Bootstrap core CSS-->
     <link href="../../libs/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
