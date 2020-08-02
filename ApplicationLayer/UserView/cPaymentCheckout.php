@@ -70,6 +70,7 @@ $totalpayment = 0;
 <div id="payment-box">
 <?php
 		// Start for Cart list for Events -Darrell
+        echo "HELLO!!!!!!";
         echo "<h4>$events</h4>";
         echo "<table width=100%>
         <tr>
