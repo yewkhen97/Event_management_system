@@ -39,7 +39,7 @@ echo '</script>';
   <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()"></a>
 </header>
       <section class="container content-section">
-        <h2 class="section-header">EQUIPMENT ORDER 02/02/2020</h2>
+        <h2 class="section-header">EQUIPMENT ORDER</h2>
             <table class="table">
               <thead>
                 <tr>
