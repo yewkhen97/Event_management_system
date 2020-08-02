@@ -1,116 +1,65 @@
-PE html>
-<html>
+<?php
+session_start();
+if($_SESSION["id"] == ""){
+echo '<script type="text/javascript">'; 
+echo 'alert("Please Login First");'; 
+echo 'window.location.href = "index.php";';
+echo '</script>';
+}
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<?php
+   include 'customerHeader.php';
+?>
+
+        <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
+    font-family: Arial;
+    line-height: 30px;
+    color: #333;
 }
 
-* {
-  box-sizing: border-box;
+#payment-box {
+    padding: 150px;
+   margin-left:500px;
+    border: #E4E4E4 1px solid;
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
 }
 
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
+#pay_now {
+    padding: 10px 30px;
+    background: #09f;
+    border: #038fec 1px solid;
+    border-radius: 3px;
+    color: #FFF;
+    width: 100%;
+    cursor: pointer;
 }
 
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
+.txt-title {
+    margin: 25px 0px 0px 0px;
+    color: #4e4e4e;
 }
 
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type=text] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.btn:hover {
-  background-color: #45a049;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
-span.price {
-  float: right;
-  color: grey;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
+.txt-price {
     margin-bottom: 20px;
-  }
+    color: #08926c;
+    font-size: 1.1em;
 }
 </style>
 </head>
 <body>
-
   <php>
     <?php
 include "../../BusinessServiceLayer/UserC/BookingController.php"; // Display Events in cart via the controller -Darrell
@@ -164,4 +113,13 @@ $totalpayment = 0;
 </body>
 </html>
 
+        </div>
+        <!-- /.container-fluid -->
 
+   
+
+   
+<?php
+         include 'customerFooter.php';
+         ?>
+</html>
