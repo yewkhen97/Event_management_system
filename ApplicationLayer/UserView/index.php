@@ -371,12 +371,6 @@ span.psw {
           </ol>
 
           <!-- Page Content -->
-
-
-
-          <h1>Select Your Member Type Hello</h1>
-
-
           <hr>
              <!-- Icon Cards-->
           <div class="row">
