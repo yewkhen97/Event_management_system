@@ -28,9 +28,8 @@ include "customerHeader.php";
 
           <!-- Page Content -->
 
-          <h1>Select/Book Your Equipment</h1>
+          <h1>Book Your Equipment</h1>
 
-          <h1>Select Your Preferred Equipment </h1>
 
           <hr>
 
