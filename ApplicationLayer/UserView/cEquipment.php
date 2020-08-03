@@ -27,7 +27,11 @@ include "customerHeader.php";
           </ol>
 
           <!-- Page Content -->
+
+          <h1>Select/Book Your Equipment</h1>
+
           <h1>Select Your Preferred Equipment </h1>
+
           <hr>
 
 <!-- Top menu on small screens -->
