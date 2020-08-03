@@ -62,14 +62,14 @@ body {
 <body>
   <php>
     <?php
-include "../../BusinessServiceLayer/UserC/BookingController.php"; // Display Events in cart via the controller -Darrell
+include "../../BusinessServiceLayer/UserC/BookingController.php"; // Display Events in cart via the controller
 $title = "Total amount that need to pay!";
 $events = "Event Package(s)";
 $totalpayment = 0;
 ?>
 <div id="payment-box">
 <?php
-		// Start for Cart list for Events -Darrell
+		// Start for Cart list for Events
         echo "<h4>$events</h4>";
         echo "<table width=100%>
         <tr>
@@ -77,11 +77,11 @@ $totalpayment = 0;
         	<th>Price</th>
           <th>Delete </th>
         </tr>";
-        $hiddenTotal = cartList(); // total price for events -Darrell
+        $hiddenTotal = cartList(); // total price for events
         echo "</table>";
         echo "<br><br>";
-        // End for Cart list for Events -Darrell
-        $totalpayment += $hiddenTotal; // Test for adding total event price -Darrell
+        // End for Cart list for Events 
+        $totalpayment += $hiddenTotal; // Test for adding total event price 
         $_SESSION['totalpayment'] = $totalpayment;
         echo"<h4>$title</h4>";
         echo"<div>MYR $totalpayment</div>";
