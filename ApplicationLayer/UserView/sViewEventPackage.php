@@ -27,7 +27,7 @@ echo '</script>';
           </ol>
 
           <!-- Page Content -->
-          <h1>Event Package</h1>
+          <h1>Your Event Package</h1>
           <br>
           <form method="POST" action="sAddEventPackage.php"><button><h5>Add Package<h5></button></form>
           <br>
