@@ -26,7 +26,7 @@ echo '</script>';
           </ol>
 
           <!-- Page Content -->
-          <h1>Select Your Action</h1>
+          <h1>Pick Your Action</h1>
           <hr>
 
 <div class="row">
@@ -58,7 +58,7 @@ echo '</script>';
                   <div class="card-body-icon">
                     <i class="fas fa-shuttle-van"></i>
                   </div>
-                  <div class="mr-5">Equipment</div>
+                  <div class="mr-5">Equipments  </div>
                 </div>
                 <a id="btnTrigger"class="card-footer text-white clearfix small z-1" href="#" data-toggle="modal" data-target="#AddEquipmentModal">
                   <span class="float-left">Click to add Equipment!</span>

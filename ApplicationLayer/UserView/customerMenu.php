@@ -28,7 +28,7 @@ include "customerHeader.php";
           </ol>
 
           <!-- Page Content -->
-          <h1>Select Your Action</h1>
+          <h1>Select Your Action </h1>
           <hr>
 
 <div class="row">
