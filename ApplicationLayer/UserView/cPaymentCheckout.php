@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 if($_SESSION["id"] == ""){
@@ -123,4 +124,5 @@ $totalpayment = 0;
 <?php
          include 'customerFooter.php';
          ?>
+
 </html>
