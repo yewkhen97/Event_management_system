@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 if($_SESSION["id"] == ""){
@@ -63,15 +62,14 @@ body {
 <body>
   <php>
     <?php
-include "../../BusinessServiceLayer/UserC/BookingController.php"; // Display Events in cart via the controller
+include "../../BusinessServiceLayer/UserC/BookingController.php"; // Display Events in cart via the controller -Darrell
 $title = "Total amount that need to pay!";
 $events = "Event Package(s)";
 $totalpayment = 0;
 ?>
 <div id="payment-box">
 <?php
-		// Start for Cart list for Events
-        echo "<h2> Cart </h2>";
+		// Start for Cart list for Events -Darrell
         echo "<h4>$events</h4>";
         echo "<table width=100%>
         <tr>
@@ -79,11 +77,11 @@ $totalpayment = 0;
         	<th>Price</th>
           <th>Delete </th>
         </tr>";
-        $hiddenTotal = cartList(); // total price for events
+        $hiddenTotal = cartList(); // total price for events -Darrell
         echo "</table>";
         echo "<br><br>";
-        // End for Cart list for Events 
-        $totalpayment += $hiddenTotal; // Test for adding total event price 
+        // End for Cart list for Events -Darrell
+        $totalpayment += $hiddenTotal; // Test for adding total event price -Darrell
         $_SESSION['totalpayment'] = $totalpayment;
         echo"<h4>$title</h4>";
         echo"<div>MYR $totalpayment</div>";
@@ -124,5 +122,4 @@ $totalpayment = 0;
 <?php
          include 'customerFooter.php';
          ?>
-
 </html>
